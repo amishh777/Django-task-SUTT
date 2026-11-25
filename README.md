@@ -25,3 +25,14 @@ example to see a users post , GET method would be used whereas to like that post
 500 is a server error response code which means that there is  a internal server error
 
 ## What jobs do HTML, CSS and JavaScript each do on a page?
+HTML provides the structure and content of headings, paragraphs, images etc
+CSS controls how the page looks that is it controls colors, fonts, layout , sizes etc
+JavaScript controls the interaction of buttons, menus and content that is displayed.
+
+## Why did the tutorial add {% csrf_token %} to the voting form?
+
+that command is to include the CSRF template tag  ,it provides protection against Cross Site Request Forgeries.
+This type of attacks occurs when a malicious website tricks us into clicking some button which does some unauthorized action using the users credentials in the browser.
+This token is always used when using methods like PUT, DELETE, POST as it involves use of user's credentials while proving authorization while making a request.
+
+## How does a website remember who you are between pages? 
