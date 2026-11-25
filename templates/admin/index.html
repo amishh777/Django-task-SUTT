@@ -1,0 +1,8 @@
+{% extends "admin/index.html" %}
+
+{% block content %}
+  {% if perms.polls.view_question or perms.polls.change_question %}
+    <p><a href="{% url 'admin:polls_question_changelist' %}">Manage poll questions</a></p>
+  {% endif %}
+  {{ block.super }}
+{% endblock %}
