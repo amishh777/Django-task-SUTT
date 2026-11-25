@@ -39,5 +39,8 @@ Each page we open sends a new HTTP request. A cookie is a small piece of data th
 Cookies prevent repeated sending of data through each request, and thus the page loads faster and uses lower bandwidth.
 the session id is sent when we move to a new page if that session id is still valid, the user doesnt need to login again.
 
-## In Django, how does a request travel through URLs, views, models and templates before a response
-comes back?
+## In Django, how does a request travel through URLs, views, models and templates before a response comes back?
+The browser send a HTTP request to django server, then it passes through URLs which tells it which view it should go to.
+The view handles this request and passes it to model which interacts with database and modifies or saves the data depending on the request and passes it back to views.
+The views passes the retrieved data to templates which combines the data with HTML layout and produces a webpage.
+The response goes back to the browser and the browser displays the webpage.
