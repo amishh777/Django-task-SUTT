@@ -30,9 +30,14 @@ CSS controls how the page looks that is it controls colors, fonts, layout , size
 JavaScript controls the interaction of buttons, menus and content that is displayed.
 
 ## Why did the tutorial add {% csrf_token %} to the voting form?
-
-that command is to include the CSRF template tag  ,it provides protection against Cross Site Request Forgeries.
+That command is to include the CSRF template tag  ,it provides protection against Cross Site Request Forgeries.
 This type of attacks occurs when a malicious website tricks us into clicking some button which does some unauthorized action using the users credentials in the browser.
 This token is always used when using methods like PUT, DELETE, POST as it involves use of user's credentials while proving authorization while making a request.
 
 ## How does a website remember who you are between pages? 
+Each page we open sends a new HTTP request. A cookie is a small piece of data that the browser stores and automatically sends back along with requests to the site. A session holds information the site wants to remember between requests.
+Cookies prevent repeated sending of data through each request, and thus the page loads faster and uses lower bandwidth.
+the session id is sent when we move to a new page if that session id is still valid, the user doesnt need to login again.
+
+## In Django, how does a request travel through URLs, views, models and templates before a response
+comes back?
